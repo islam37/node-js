@@ -28,7 +28,16 @@ const fs= require('fs')
 
 
 //sync vs async 
+//sync
 
 const data = fs.readFileSync('./file.text', 'utf-8');
 console.log(data);
 
+
+//async
+fs.readFile('./file.text','utf-8',(err, data) => {
+  
+    console.log(data);
+   
+  })
+  console.log('done reading file');
